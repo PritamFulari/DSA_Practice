@@ -14,10 +14,15 @@
  * }
  */
 
-Pre Order Traverse
+
+//
+
+// Pre Order Traverse
 
 public List<Integer> preorderTraversal(TreeNode root) {
     List<Integer> result = new ArrayList<>();
+  // Stack<TreeNode> stack = new Stack<>();  Deque is used as it's more efficient than stack in java
+
     Deque<TreeNode> stack = new ArrayDeque<>();
     TreeNode p = root;
     while (p != null || !stack.isEmpty()) {
@@ -33,7 +38,7 @@ public List<Integer> preorderTraversal(TreeNode root) {
     return result;
 }
 
-In Order Traverse
+// In Order Traverse
 
 public List<Integer> inorderTraversal(TreeNode root) {
     List<Integer> result = new ArrayList<>();
@@ -52,7 +57,7 @@ public List<Integer> inorderTraversal(TreeNode root) {
     return result;
 }
 
-Post Order Traverse
+// Post Order Traverse
 
 public List<Integer> postorderTraversal(TreeNode root) {
     List<Integer> result = new ArrayList<>();
